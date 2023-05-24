@@ -1,36 +1,53 @@
-html,body,.mainContainer
+html,body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+
+
+.mainContainer
 {
     min-height: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     float: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
+
 
 .leftHalf
 {
     background-color: blueviolet;
     float: left;
-    width: 60%;
+    width: 50%;
     height: 100%;
+    position: relative;
+    resize: both;
+    overflow: auto;
 }
 
 .rightHalf
 {
     background-color: white;
-    float: right;
-    width: 40%;
+    float:left; 
+    width: 50%;
     height: 100%;
+    position: relative;
+    resize: both;
+    overflow: auto;
 }
 
 #li1
 {
+    display: inline;
     padding: 4px;
-    margin-left: 2px;
-    margin-top: 4px;
-    float: left;
     list-style-type: none;
-    font-size: 50px;
+    font-size: 2vh;
     font-family: fantasy;
     color: white;
 }
@@ -38,10 +55,8 @@ html,body,.mainContainer
 #li2
 {
     padding: 4px;
-    margin-left: 2px;
-    margin-top: 4px;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 2vh;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
 }
@@ -50,9 +65,9 @@ html,body,.mainContainer
 {
     padding: 4px;
     margin-left: 2px;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     list-style-type: none;
-    font-size: 15px;
+    font-size: 2vh;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: grey;
 }
@@ -60,13 +75,12 @@ html,body,.mainContainer
 #li4
 {
     padding: 4px;
-    margin-left: 35px;
-    margin-top: 4px;
+    margin-left: 3px;
+    /* margin-top: 4px; */
     list-style-type: none;
-    font-size: 12px;
+    font-size: 2vh;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
-    text-align: inherit;
 }
 
 
@@ -82,14 +96,14 @@ html,body,.mainContainer
 
 .logo1
 {
-    height: 60px;
-    width: 60px;
+    height: auto;
+    width: 20%;
 }
 
 .logo2
 {
-    height: 60px;
-    width: 60px;
+    height: auto;
+    width: 20%;
 }
 
 .google
@@ -104,55 +118,57 @@ html,body,.mainContainer
 
 #part1
 {
-    height: 20%;
-    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
 }
 
 #part2
 {
-    height: 20%;
-    width: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
 }
 
 #part3
 {
-    height: 20%;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
+
 
 #part4
 {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-#part5
-{
-    height: 10%;
-    width: 100%;
-}
-
-#part6
-{
-    height: 80%;
-    width: 100%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    resize: horizontal;
 }
 
 #para1
 {
     color: white;
-    font-size: 30px;
+    /* font-size: 30px; */
     text-align: center;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    font-size: 2vh;
+    max-width: 280px;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 280px;
 }
 
 #para2
 {
     text-align: center;
     line-height: 1.4;
+    position: relative;
 }
 
 #para3
@@ -167,15 +183,19 @@ html,body,.mainContainer
     border-width: 0 0 2px;
     border-color: lightgray;
     line-height: 30px;
-    width: 270px;
+    width: 100%;
+    height: auto;
 }
 
 button
 {
     background-color: blueviolet;
     height: 40px;
-    width: 270px;
+    width: 100%;
     color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 2vh;
 }
 
 #b1
@@ -184,6 +204,10 @@ button
     color: black;
     font-weight: bold;
     border-color: wheat;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 2vh;
 }
 
 #b2
@@ -192,4 +216,13 @@ button
     color: black;
     font-weight: bold;
     border-color: wheat;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#t1
+{
+    font-size: 3vh;
 }
