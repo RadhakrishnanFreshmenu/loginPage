@@ -1,13 +1,15 @@
 import './App.css';
 import logo from './assets/logo1.png';
 import user from './assets/user.png';
+import Button from './components/Button';
+import Input from './components/Input';
 
 function App() {
   return (
     <>
       <div className='flex h-screen'>
 
-        <div className='flex flex-col w-1/2 h-screen bg-white'>
+        <div className='flex flex-col w-1/2 h-screen bg-purple-400'>
 
           <div className='flex h-1/4 items-center justify-center'>
             <img src={logo} alt='' className='w-1/6 h-1/2 max-w-full max-h-full mt-4 ml-4'></img>
@@ -22,7 +24,7 @@ function App() {
           </div>
 
           <div className='flex flex-col h-1/4 items-center justify-start'>
-            <text className='text-red-400 text-xs font-bold text-center mt-2 w-3/5'>Frankie Sullivan</text>
+            <text className='text-white text-xs font-bold text-center mt-2 w-3/5'>Frankie Sullivan</text>
             <text className='text-gray-300 text-xs w-3/5 text-center'>Head of Design, Starlight Labs.</text>
 
             <div class="flex items-center justify-center mt-1">
@@ -42,7 +44,28 @@ function App() {
 
         </div>
 
-        <div className='flex flex-col w-1/2 h-screen bg-purple-400'>
+        <div className='flex flex-col w-1/2 h-screen bg-white items-center justify-center'>
+
+          <div className='flex items-center justify-center'>
+            <div className='flex flex-col justify-start flex-wrap'>
+              <img src={logo} alt='' className='w-1/6 h-1/3 max-w-full max-h-full mt-2 ml-4'/>
+              <div className="ml-4 flex flex-col">
+                <text className="w-auto mt-2 text-base font-bold">Sign in</text>
+                <text className="w-4/5 mt-2 text-sm ">Welcome back! Please enter your details.</text>
+              </div>
+
+              {/* Reusable input and button components */}
+
+              <Input type="text" className="w-3/4 mt-2 ml-4 border border-gray-400" placeholder="Email"></Input>
+              <Input type="text" className="w-3/4 mt-2 ml-4 border border-gray-400" placeholder="Password"></Input>
+
+              <Button className="bg-purple-400 ml-4 mt-2 w-3/4" disabled>Sign in</Button>
+              <Button className="bg-white ml-4 border border-gray-400 mt-1 w-3/4" disabled><span class="fa fa-google google"/>Sign in with Google</Button>
+              <Button className="bg-white ml-4 border border-gray-400 mt-1 w-3/4" disabled><span class="fa fa-apple apple"/>Sign in with Apple ID</Button>
+              
+              <text class="mt-2 ml-4 w-auto text-sm ">Need an account?&nbsp;<strong>Create an account</strong></text>
+            </div>
+          </div>
 
         </div>
 
